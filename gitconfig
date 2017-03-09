@@ -1,0 +1,25 @@
+[user]
+	email = github@daniel.desousa.cc
+	name = Daniel DeSousa
+[core]
+	editor = vim
+	excludesfile = ~/.gitignore
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
+[alias]
+	dt = difftool
+	co = checkout
+	ci = commit
+	br = branch
+	st = status
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+[push]
+	default = matching
+[merge]
+	tool = vimdiff
+[filter "lfs"]
+	smudge = git-lfs smudge %f
+	required = true
+	clean = git-lfs clean %f

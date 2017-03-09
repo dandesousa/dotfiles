@@ -1,0 +1,20 @@
+- defaults:
+    link:
+        create: true
+        relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.tmux.conf: tmux.conf
+    ~/.zshrc: zshrc
+    ~/.gitignore: gitignore
+    ~/.gitconfig: gitconfig
+    ~/.vimrc: vimrc
+    ~/.vim: vim
+
+- shell:
+    - ["git clone https://github.com/robbyrussell/oh-my-zsh.git $HOME/.oh-my-zsh", "Installing oh-my-zsh"]
+    - ["cp honukai.zsh-theme ~/.oh-my-zsh/themes/honukai.zsh-theme", "Installing honukai theme"]
+    - ["vim -u \"$HOME/.vim/bundles.vim\" +BundleInstall +qall", "Installing vim plugins"]
+    - ["chsh -s /bin/zsh", "Installing zsh"]
