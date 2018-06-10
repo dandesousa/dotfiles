@@ -4,6 +4,7 @@
 [core]
 	editor = vim
 	excludesfile = ~/.gitignore
+    attributesFile = ~/.gitattributes
 [diff]
 	tool = vimdiff
 [difftool]
@@ -23,3 +24,28 @@
 	smudge = git-lfs smudge %f
 	required = true
 	clean = git-lfs clean %f
+
+[diff "zip"]
+    textconv = unzip -p
+    binary = true
+[diff "gz"]
+    textconv = gzcat
+    binary = true
+[diff "bz2"]
+    textconv = bzcat
+    binary = true
+[diff "xz"]
+    textconv = xzcat
+    binary = true
+[diff "tar"]
+    textconv = tar -O -xf
+    binary = true
+[diff "tar-bz2"]
+    textconv = tar -O -xjf
+    binary = true
+[diff "tar-gz"]
+    textconv = tar -O -xzf
+    binary = true
+[diff "tar-xz"]
+    textconv = tar -O -xJf
+    binary = true

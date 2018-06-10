@@ -12,6 +12,7 @@
     ~/.gitconfig: gitconfig
     ~/.vimrc: vimrc
     ~/.vim: vim
+    ~/.config: config
 
 - shell:
     - ["git clone https://github.com/robbyrussell/oh-my-zsh.git $HOME/.oh-my-zsh", "Installing oh-my-zsh"]
